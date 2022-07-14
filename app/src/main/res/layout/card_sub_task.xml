@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/cardViewItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0.8dp">
+
+        <RelativeLayout
+            android:id="@+id/layoutItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/textNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toStartOf="@id/radioButton"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeStepGranularity="2sp"
+                android:autoSizeTextType="uniform"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                tools:ignore="TextViewEdits" />
+
+
+            <CheckBox
+                android:id="@+id/radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutEditItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoAddSubTask"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toStartOf="@id/closeButton"
+                android:background="@color/white"
+
+                android:hint="@string/subtasks"
+                app:boxBackgroundMode="outline"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="20sp"
+                    android:autoSizeMinTextSize="15sp"
+                    android:autoSizeStepGranularity="2sp"
+                    android:autoSizeTextType="uniform"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColor="@color/black" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/closeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/fechar"
+                android:src="@drawable/ic_close_cinza" />
+
+
+            <LinearLayout
+                android:id="@+id/LayoutButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/campoAddSubTask"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonExcluir"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/botao"
+                    android:text="@string/excluir"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="15dp"
+                    android:background="@color/white" />
+
+                <Button
+                    android:id="@+id/buttonSalvar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/botao"
+                    android:text="@string/salvar"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

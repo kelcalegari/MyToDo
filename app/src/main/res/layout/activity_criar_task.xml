@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".task.task.CriarTaskActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttonSalvar"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/View"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageButton
+                android:id="@+id/closeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/fechar"
+                android:src="@drawable/ic_close" />
+
+
+            <LinearLayout
+                android:id="@+id/layoutSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/View"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinnerPrioriedade"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:accessibilityPaneTitle="teste" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="30dp"
+                    android:background="@color/white" />
+
+                <Spinner
+                    android:id="@+id/spinnerCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1." />
+
+
+                <ImageButton
+                    android:id="@+id/buttonAddCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.75"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/adicionar_categoria"
+                    android:src="@drawable/ic_add" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoTitulo"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/layoutSpinner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:hint="@string/t_tulo"
+                app:boxBackgroundMode="outline"
+
+                app:endIconMode="clear_text"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:backgroundTint="@color/colorPrimary"
+                    android:inputType="textShortMessage|textCapSentences"
+                    android:maxLength="30" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoData"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/campoTitulo"
+                android:background="@color/white"
+                android:hint="@string/vencimento"
+                app:boxBackgroundMode="outline"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:ems="10"
+                    android:inputType="textShortMessage|datetime" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoDescricao"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/campoData"
+                android:background="@color/white"
+                android:hint="@string/descri_o"
+                app:boxBackgroundMode="outline"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:inputType="textAutoCorrect|textMultiLine|textCapSentences" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/layoutSubTasks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/campoDescricao">
+
+                <View
+                    android:id="@+id/linhaStart"
+                    android:layout_width="10dp"
+                    android:layout_height="2dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/cinza" />
+
+                <TextView
+                    android:id="@+id/textSubTasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/linhaStart"
+                    android:text="@string/subtasks"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/limhaEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/textSubTasks"
+                    android:background="@color/cinza" />
+
+
+            </RelativeLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoAddSubTask"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutSubTasks"
+
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toStartOf="@id/buttonAddSubTask"
+                android:background="@color/white"
+                android:hint="@string/subtasks"
+                app:boxBackgroundMode="outline"
+                app:endIconMode="clear_text"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:backgroundTint="@color/colorPrimary"
+                    android:inputType="textCapSentences|textMultiLine" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/buttonAddSubTask"
+                android:layout_width="30dp"
+                android:layout_height="60dp"
+
+                android:layout_below="@id/layoutSubTasks"
+                android:layout_alignParentEnd="true"
+
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/adicionar_subtask"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:src="@drawable/ic_add" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerviewSubTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/campoAddSubTask"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toStartOf="@id/buttonAddSubTask" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/buttonSalvar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/botao"
+        android:text="@string/salvar"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>

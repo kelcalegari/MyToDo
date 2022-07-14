@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".faculdade.task.VisualizarTaskFaculdadeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/botoes">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/linha1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/campoTitulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+
+                        android:layout_toLeftOf="@id/checkBoxConcluir"
+                        android:autoSizeMaxTextSize="30sp"
+                        android:autoSizeMinTextSize="12sp"
+                        android:autoSizeTextType="uniform"
+                        android:text="@string/t_tulo"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxConcluir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:scaleX="1.8"
+                        android:scaleY="1.8" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lebelVencimento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linha1">
+
+
+                    <ImageView
+                        android:id="@+id/imagem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:src="@drawable/ic_data" />
+
+
+                    <TextView
+                        android:id="@+id/campoData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/imagem"
+                        android:text="@string/_28_10_2022"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                    <ImageView
+                        android:id="@+id/imagemConluido"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toStartOf="@id/campoDataConluido"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:src="@drawable/ic_data_concluido"
+                        android:visibility="gone" />
+
+
+                    <TextView
+                        android:id="@+id/campoDataConluido"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/_28_10_2022"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/lebelPrioriedade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lebelVencimento"
+                    android:layout_marginTop="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/imagemPrioriedade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:src="@drawable/ic_prioridade" />
+
+
+                    <TextView
+                        android:id="@+id/campoPrioriedade"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/imagemPrioriedade"
+                        android:text="@string/prioriedade"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lebelCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lebelPrioriedade"
+                    android:layout_marginTop="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/imagemMateria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:scaleX="2.5"
+                        android:scaleY="2.5"
+                        android:src="@drawable/ic_class" />
+
+
+                    <TextView
+                        android:id="@+id/campoMateria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/imagemMateria"
+                        android:text="@string/materia"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/lebelDescricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lebelCategoria"
+                    android:layout_marginTop="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/imagemDescricao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:src="@drawable/ic_descricao" />
+
+
+                    <TextView
+                        android:id="@+id/campoDescricao"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@id/imagemDescricao"
+                        android:text="@string/descri_o"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        tools:ignore="LabelFor" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/layoutSubTasks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lebelDescricao">
+
+                    <View
+                        android:id="@+id/linhaStart"
+                        android:layout_width="10dp"
+                        android:layout_height="2dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/cinza" />
+
+                    <TextView
+                        android:id="@+id/textSubTasks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/linhaStart"
+                        android:text="@string/subtasks"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/limhaMeio"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toStartOf="@id/spinnerListSubTask"
+                        android:layout_toEndOf="@id/textSubTasks"
+                        android:background="@color/cinza" />
+
+                    <Spinner
+                        android:id="@+id/spinnerListSubTask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:layout_toStartOf="@id/linhaEnd" />
+
+                    <View
+                        android:id="@+id/linhaEnd"
+                        android:layout_width="10dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/cinza" />
+
+
+                </RelativeLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/campoAddSubTask"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layoutSubTasks"
+
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toStartOf="@id/buttonAddSubTask"
+                    android:background="@color/white"
+                    android:enabled="false"
+                    android:hint="@string/subtasks"
+                    android:visibility="gone"
+                    app:boxBackgroundMode="outline"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:backgroundTint="@color/colorPrimary"
+                        android:inputType="textCapSentences|textMultiLine" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/buttonAddSubTask"
+                    android:layout_width="30dp"
+                    android:layout_height="60dp"
+
+                    android:layout_below="@id/layoutSubTasks"
+                    android:layout_alignParentEnd="true"
+
+                    android:layout_marginEnd="10dp"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/adicionar_subtask"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    android:src="@drawable/ic_add" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewSubTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/campoAddSubTask"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toLeftOf="@id/buttonAddSubTask" />
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/botoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonExcluir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/botao"
+            android:text="@string/excluir"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:background="@color/white" />
+
+        <Button
+            android:id="@+id/buttonEditar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/botao"
+            android:text="@string/editar"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

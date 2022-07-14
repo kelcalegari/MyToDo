@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ActionBarPersonalizado">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <style name="ComponeneMenu">
+        <item name="android:backgroundTint">@color/cinzabox</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="CampoDigitar">
+
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/campodigitar</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:padding">15dp</item>
+
+
+    </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:background">@drawable/label_layout</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+        <item name="android:padding">13dp</item>
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:layout_marginRight">18dp</item>
+
+    </style>
+    <style name="Botao">
+
+    <item name="android:layout_height">30dp</item>
+    <item name="android:layout_width">match_parent</item>
+
+    <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="container_bottom">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/baground_bottom</item>
+    </style>
+    <style name="container_bottom_cinza">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/baground_bottom_cinza</item>
+    </style>
+
+    <style name="container_criartarefa">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/baground_criartarefa</item>
+    </style>
+
+    <style name="container_view_criartarefa">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/baground_view_criartarefa</item>
+    </style>
+
+
+
+</resources>

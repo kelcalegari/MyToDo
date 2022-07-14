@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".task.task.list.TaskActivity">
+
+    <ImageButton
+        android:id="@+id/imageVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:contentDescription="@string/voltar"
+        app:srcCompat="@drawable/ic_voltar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:elevation="0dp">
+
+
+        <View
+            style="@style/container_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp" />
+
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentTaskPrincipal"
+            android:name="br.kelvynn.mytodobasic.BlankFragment"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="95dp" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

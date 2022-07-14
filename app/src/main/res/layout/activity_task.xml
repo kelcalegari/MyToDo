@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".task.TaskActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0.8dp">
+
+        <View
+            android:id="@+id/fundoabaixo"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="40dp"
+            android:background="@color/colorPrimary" />
+
+        <ImageButton
+            android:id="@+id/imageAddTask"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_above="@id/fundoabaixo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-90dp"
+
+            android:backgroundTint="@android:color/transparent"
+
+            android:contentDescription="@string/adicionar_tarefa"
+            app:srcCompat="@drawable/ic_task"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toStartOf="@id/menu" />
+
+            <ImageButton
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorPrimary"
+                android:contentDescription="@string/menu"
+                android:scaleX="2"
+                android:scaleY="2"
+                app:srcCompat="@drawable/ic_menu" />
+
+
+        </RelativeLayout>
+
+        <View
+            style="@style/container_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp" />
+
+        <fragment
+            android:id="@+id/fragmentPrincipal"
+            android:name="br.kelvynn.mytodobasic.BlankFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="75dp"
+            tools:ignore="FragmentTagUsage" />
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

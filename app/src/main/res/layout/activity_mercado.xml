@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".mercado.MercadoActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutAddBasicTask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="1dp"
+        android:saveEnabled="false"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/viewSair"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/campoAddItemMercado" />
+
+        <LinearLayout
+            android:id="@+id/campoAddItemMercado"
+            style="@style/container_bottom_cinza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+
+                android:layout_marginBottom="20dp"
+
+                android:hint="@string/item"
+                app:boxBackgroundMode="outline"
+                app:endIconMode="clear_text">
+
+                <AutoCompleteTextView
+                    android:id="@+id/campoNomeItemMercado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:inputType="textCapWords|textShortMessage"
+                    android:padding="15dp"
+                    tools:ignore="LabelFor" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/campoQuantidade"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="0.4"
+                    android:background="@color/cinzabox"
+
+                    app:boxBackgroundMode="outline"
+
+                    tools:ignore="NestedWeights">
+
+                    <EditText
+                        android:id="@+id/editQuantidade"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/cinzabox"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:maxLength="2"
+                        android:padding="5dp"
+                        android:text="@string/_1"
+                        android:textSize="30sp"
+                        tools:ignore="Autofill,LabelFor" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/mais"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@android:color/transparent"
+                        android:contentDescription="@string/aumentar_a_quantidade"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        app:srcCompat="@drawable/ic_add" />
+
+                    <ImageButton
+                        android:id="@+id/menos"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:backgroundTint="@android:color/transparent"
+                        android:contentDescription="@string/diminuir_a_quantidade"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        app:srcCompat="@drawable/ic_menos" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinnerCategoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="0.2" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/buttonSalvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/botao"
+                android:text="@string/salvar"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0.8dp">
+
+        <View
+            android:id="@+id/fundoabaixo"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="40dp"
+            android:background="@color/colorPrimary" />
+
+        <ImageButton
+            android:id="@+id/imageAddTask"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_above="@id/fundoabaixo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-90dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/adicionar_tarefa"
+            app:srcCompat="@drawable/ic_task"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/delete"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_above="@id/fundoabaixo"
+            android:layout_alignBottom="@id/imageAddTask"
+            android:layout_marginEnd="-20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@id/imageAddTask"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/adicionar_tarefa"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            app:srcCompat="@drawable/dell"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/deleteConcluidos"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_above="@id/fundoabaixo"
+            android:layout_alignBottom="@id/imageAddTask"
+            android:layout_marginStart="-20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/imageAddTask"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/adicionar_tarefa"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            app:srcCompat="@drawable/dellconcluido"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+
+            <ImageButton
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorPrimary"
+                android:contentDescription="@string/menu"
+                android:scaleX="2"
+                android:scaleY="2"
+                app:srcCompat="@drawable/ic_menu" />
+
+
+        </RelativeLayout>
+
+        <View
+            style="@style/container_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewMercado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp" />
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".basictask.BasicTaskActivity">
+
+    <RelativeLayout
+        android:id="@+id/layoutAddBasicTask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="1dp"
+        android:saveEnabled="false"
+        android:visibility="gone">
+
+        <View
+            android:id="@+id/viewSair"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/campoAddBasicTask" />
+
+        <LinearLayout
+            android:id="@+id/campoAddBasicTask"
+            style="@style/container_bottom_cinza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoBasicTask"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@color/cinzabox"
+                android:hint="@string/informe_a_tarefa"
+                app:boxBackgroundMode="outline"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords|textShortMessage" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/buttonSalvar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/botao"
+                android:text="@string/salvar"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="0.8dp">
+
+        <View
+            android:id="@+id/fundoabaixo"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="40dp"
+            android:background="@color/colorPrimary" />
+
+        <ImageButton
+            android:id="@+id/imageAddTask"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_above="@id/fundoabaixo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-90dp"
+
+            android:backgroundTint="@android:color/transparent"
+
+            android:contentDescription="@string/adicionar_tarefa"
+            app:srcCompat="@drawable/ic_task"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:elevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toStartOf="@id/menu" />
+
+            <ImageButton
+                android:id="@+id/menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorPrimary"
+                android:contentDescription="@string/menu"
+                android:scaleX="2"
+                android:scaleY="2"
+                app:srcCompat="@drawable/ic_menu" />
+
+
+        </RelativeLayout>
+
+        <View
+            style="@style/container_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewBasicTask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp" />
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

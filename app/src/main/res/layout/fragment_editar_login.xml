@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Usuario.EditarLoginFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lebelCadastro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/atualizar_cadastro"
+                android:textColor="@color/cinza"
+                android:textSize="35sp" />
+
+
+            <TextView
+                android:id="@+id/textNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lebelCadastro"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/nome_completo"
+                android:textColor="@color/cinzaescrita"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoNome"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textNome"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/cinzabox"
+                android:hint="@string/digite_o_seu_nome_completo"
+                android:inputType="textEmailAddress"
+                android:visibility="gone"
+
+                app:boxBackgroundMode="outline"
+                app:endIconMode="clear_text"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textILogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/campoNome"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/e_mail"
+                android:textColor="@color/cinzaescrita"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/campoEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textILogin"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="32dp"
+                android:background="@color/cinzabox"
+                android:hint="@string/digite_o_seu_e_mail"
+                android:inputType="textEmailAddress"
+                android:visibility="gone"
+                app:boxBackgroundMode="outline"
+
+                app:endIconMode="clear_text"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/deslogar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/campoEmail"
+                android:layout_marginStart="38dp"
+
+                android:layout_marginTop="10dp"
+
+                android:clickable="true"
+                android:text="@string/deslogar_da_conta"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/mudarSenha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/deslogar"
+                android:layout_marginStart="38dp"
+
+                android:layout_marginTop="10dp"
+
+                android:clickable="true"
+                android:text="@string/enviar_e_mail_para_mudar_senha"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonAtualizarConta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/botao"
+        android:text="@string/atualizar_login"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

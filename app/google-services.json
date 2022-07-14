@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "718737557392",
+    "firebase_url": "https://todobasic-6b285-default-rtdb.firebaseio.com",
+    "project_id": "todobasic-6b285",
+    "storage_bucket": "todobasic-6b285.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718737557392:android:bb06840893e949a42f5515",
+        "android_client_info": {
+          "package_name": "br.kelvynn.mytodobasic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718737557392-gjo03lvagtdcrkkrifn5ao2rtb1nmma5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmFLIbg2ZvbGM9hS2OvqAJEjFhCGVEpxE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718737557392-gjo03lvagtdcrkkrifn5ao2rtb1nmma5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

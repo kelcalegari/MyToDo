@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".menu.MenuActivity">
+
+
+    <ImageButton
+        android:id="@+id/imageVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:contentDescription="@string/voltar"
+        app:srcCompat="@drawable/ic_voltar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+            style="@style/container_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/cinzabox">
+
+                <RelativeLayout
+                    android:id="@+id/home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/ic_home"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:contentDescription="@string/faculdade"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        app:srcCompat="@drawable/ic_home" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/ic_home">
+
+                        <TextView
+                            android:id="@+id/textHome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/home"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/cinzabox">
+
+                <RelativeLayout
+                    android:id="@+id/task"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/ic_task"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:contentDescription="@string/faculdade"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        app:srcCompat="@drawable/ic_menutask" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/ic_task">
+
+                        <TextView
+                            android:id="@+id/textTask"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/task"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/cinzabox">
+
+                <RelativeLayout
+                    android:id="@+id/basicTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/ic_basictask"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="15dp"
+                        android:contentDescription="@string/faculdade"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        app:srcCompat="@drawable/ic_menutask" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/ic_basictask">
+
+                        <TextView
+                            android:id="@+id/textBasicTask"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/basic_task"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/cinzabox">
+
+                <RelativeLayout
+                    android:id="@+id/mercado"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/ic_mercado"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:contentDescription="@string/faculdade"
+                        android:scaleX="1.8"
+                        android:scaleY="1.8"
+                        app:srcCompat="@drawable/ic_mercado" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/ic_mercado">
+
+                        <TextView
+                            android:id="@+id/textMercado"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/mercado"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/cinzabox">
+
+                <RelativeLayout
+                    android:id="@+id/faculdade"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/ic_faculdade"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:contentDescription="@string/faculdade"
+                        app:srcCompat="@drawable/ic_faculdade" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/ic_faculdade">
+
+                        <TextView
+                            android:id="@+id/textFaculdade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/faculdade"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/cinzabox">
+
+                <RelativeLayout
+                    android:id="@+id/configuracao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:id="@+id/ic_config"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_margin="15dp"
+                        android:contentDescription="@string/menu_configura_o"
+                        app:srcCompat="@drawable/ic_config" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@+id/ic_config">
+
+                        <TextView
+                            android:id="@+id/textConfiguracao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/configura_o"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

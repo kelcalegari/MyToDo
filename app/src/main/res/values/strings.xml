@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name" translatable="false">MyToDo</string>
+
+
+    <string-array name="tipoLista">
+        <item>Hoje</item>
+        <item>Tarefas</item>
+        <item>Categorias</item>
+        <item>Prioridade</item>
+        <item>Concluídos</item>
+    </string-array>
+
+    <string-array name="tipoListaFaculdade">
+        <item>Hoje</item>
+        <item>Tarefas</item>
+        <item>Matéria</item>
+        <item>Prioridade</item>
+        <item>Concluídos</item>
+    </string-array>
+
+    <string-array name="Prioriedade">
+        <item>Baixa</item>
+        <item>Media</item>
+        <item>Alta</item>
+        <item>Urgente</item>
+    </string-array>
+
+    <string-array name="ListSubTask">
+        <item>A fazer </item>
+        <item>Concluídos</item>
+        <item>Todos</item>
+    </string-array>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="data">Data</string>
+    <string name="prioriedade">Prioridade</string>
+    <string name="categoria">Categoria</string>
+    <string name="editar">Editar</string>
+    <string name="todo">TODO</string>
+    <string name="excluir">Excluir</string>
+    <string name="nome_da_categoria">Nome da categoria</string>
+    <string name="fechar_categorias">Fechar Categorias</string>
+    <string name="editar_lista">Editar Lista</string>
+    <string name="salvar">Salvar</string>
+    <string name="t_tulo">Título</string>
+    <string name="vencimento">Vencimento</string>
+    <string name="descri_o">Descrição</string>
+    <string name="concluido">Concluído:</string>
+    <string name="login">Login</string>
+    <string name="subtasks">SubTasks</string>
+    <string name="adicionar_subtask">Adicionar subtask</string>
+    <string name="voltar">Voltar</string>
+    <string name="adicionar_tarefa">Adicionar tarefa</string>
+    <string name="menu_configura_o">Menu, configuração</string>
+    <string name="configura_o">Configuração</string>
+    <string name="fechar">Fechar</string>
+    <string name="cadastro">Cadastro</string>
+    <string name="nome_completo">Nome Completo</string>
+    <string name="digite_o_seu_nome_completo">Digite o seu nome completo</string>
+    <string name="e_mail">E-mail</string>
+    <string name="digite_o_seu_e_mail">Digite o seu E-mail</string>
+    <string name="senha">Senha</string>
+    <string name="digite_a_senha">Digite a senha</string>
+    <string name="confirme_a_senha">Confirme a senha</string>
+    <string name="digite_novamente_a_senha">Digite novamente a senha</string>
+    <string name="j_tem_conta">Já tem conta?</string>
+    <string name="click_aqui">Clique Aqui</string>
+    <string name="criar_login">Criar Login</string>
+    <string name="atualizar_cadastro">Atualizar cadastro</string>
+    <string name="deslogar_da_conta">Deslogar da conta</string>
+    <string name="enviar_e_mail_para_mudar_senha">Enviar e-mail para mudar senha!</string>
+    <string name="atualizar_login">Atualizar Login</string>
+    <string name="login_titulo">LOGIN</string>
+    <string name="ainda_n_o_tem_conta">Ainda não tem conta?</string>
+    <string name="vencimento_pontos">Vencimento:</string>
+    <string name="faculdade">Faculdade</string>
+    <string name="_28_10_2022">28/10/2022</string>
+    <string name="title_activity_faculdade_task">FaculdadeTaskActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="materia">Materia</string>
+    <string name="nome_da_mat_ria">Nome da Matéria</string>
+    <string name="basic_task">Basic Task</string>
+    <string name="informe_a_tarefa">Informe a tarefa</string>
+    <string name="item">Item</string>
+    <string name="quantidade">Quantidade</string>
+    <string name="mercado">Mercado</string>
+    <string name="task">Task</string>
+    <string name="_1">1</string>
+    <string name="divisa">-</string>
+    <string name="vencimento_">Vencimento:</string>
+    <string name="aumentar_a_quantidade">Aumentar a quantidade</string>
+    <string name="diminuir_a_quantidade">Diminuir a quantidade</string>
+    <string name="menu">Menu</string>
+    <string name="adicionar_categoria">Adicionar Categoria</string>
+    <string name="home">Home</string>
+</resources>

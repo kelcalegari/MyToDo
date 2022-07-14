@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".faculdade.materia.MateriaActivity">
+
+    <ImageButton
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="@string/fechar_categorias"
+        android:src="@drawable/ic_close_azul" />
+
+    <fragment
+        android:id="@+id/fragmentMateria"
+        android:name="br.kelvynn.mytodobasic.faculdade.materia.AddMateriaFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/closeButton"
+        tools:ignore="FragmentTagUsage" />
+
+</RelativeLayout>
